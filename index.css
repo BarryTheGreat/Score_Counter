@@ -1,0 +1,103 @@
+@font-face {
+    font-family: "Cursed";
+    src: url("CursedTimerUlil-Aznm.ttf");
+}
+
+body {
+  margin: 0;
+  background: #E11D48;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3{
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  margin-top: 68px;
+  font-size: 40px;
+  width: 149px;
+  height: 36px;
+  text-align: center;
+}
+.score{
+color: #F94F6D;
+text-align: center;
+background-color: black;
+border-radius: 10px;
+font-family: "Cursed";
+width: 160px;
+height: 120px;
+font-size: 90px;
+padding: 0px;
+margin: 0px;
+margin-bottom: 26px;
+margin-top: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: 135px;
+}
+
+.buttons{
+  display: grid;
+}
+
+.add{
+  background: transparent;
+  width: 160px;
+  height: 45px;
+  font-family: "Cursed";
+  color: white;
+  margin-bottom: 9px;
+  font-size: 18px;
+  border-radius: 5px;
+  line-height: 42px;
+  border-style: solid;
+  transition: 300ms;
+}
+
+.add:hover{
+  scale:110%;
+}
+.add:active{
+  background-color: rgba(251, 113, 133, 1);
+  opacity: 0.75;
+}
+
+
+.NewGame{
+  background: rgba(27, 36, 74, 1);
+  font-family: "Cursed";
+  text-align: center;
+  padding: 0px;
+  color: white;
+  margin-top: 40px;
+  font-size: 25px;
+  width:500px;
+  border-radius: 5px;
+  line-height: 42px;
+  border-style: solid;
+  transition: 300ms;
+}
+
+.NewGame:hover{
+  scale:110%;
+}
+
+.NewGame:active{
+  background: rgb(48, 54, 84);
+}
+
+.New{
+  display: grid;
+  justify-content: center;
+}
+
+mark{
+  color:white;
+  background-color: rgba(27, 36, 74, 1);
+  padding: 8px;
+  border-radius: 5px;
+}
