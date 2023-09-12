@@ -24,7 +24,7 @@ homeScore.textContent = countHome
 guestScore.textContent= countGuest
 
 homeName.textContent = 'HOME'
-guestName.textContent = 'GUEST'
+guestName.textContent = 'AWAY'
 
 add1Home.onclick = () =>{
   countHome +=1
@@ -76,15 +76,15 @@ newGame.onclick = () =>{
 function updateGame(){
   if (countHome > countGuest) {
     homeName.innerHTML= "<mark>HOME</mark>"
-    guestName.innerHTML = "GUEST";
+    guestName.innerHTML = "AWAY";
   } 
   else if (countHome < countGuest) {
     homeName.innerHTML = "HOME"
-    guestName.innerHTML = "<mark>GUEST</mark>"
+    guestName.innerHTML = "<mark>AWAY</mark>"
   } 
   else {
     homeName.innerHTML = "HOME"
-    guestName.innerHTML = "GUEST"
+    guestName.innerHTML = "AWAY"
   }
 }
 
@@ -95,11 +95,11 @@ function updateGame(){
 //     while(flag == false){
 //       if(countHome>countGuest){
 //         homeName.textContent = "<mark>HOME</mark>"
-//         guestName.textContent = "GUEST"
+//         guestName.textContent = "AWAY"
 //       }
 
 //       else if(countGuest>countHome){
-//         guestName.textContent = "<mark>GUEST</mark>"
+//         guestName.textContent = "<mark>AWAY</mark>"
 //         homeName.textContent = "HOME"
 //       }
 //     }
