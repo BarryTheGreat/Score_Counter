@@ -26,53 +26,6 @@ guestScore.textContent= countGuest
 homeName.textContent = 'HOME'
 guestName.textContent = 'AWAY'
 
-add1Home.onclick = () =>{
-  countHome +=1
-  homeScore.textContent = countHome
-  updateGame()
-}
-
-
-add2Home.onclick = () =>{
-  countHome +=2
-  homeScore.textContent = countHome
-  updateGame()
-}
-
-add3Home.onclick = () =>{
-  countHome +=3
-  homeScore.textContent = countHome
-  updateGame()
-}
-
-add1Guest.onclick = () =>{
-  countGuest +=1
-  guestScore.textContent = countGuest
-  updateGame()
-}
-
-
-add2Guest.onclick = () =>{
-  countGuest +=2
-  guestScore.textContent = countGuest
-  updateGame()
-}
-
-add3Guest.onclick = () =>{
-  countGuest +=3
-  guestScore.textContent = countGuest
-  updateGame()
-}
-
-
-newGame.onclick = () =>{
-  countHome = 0
-  countGuest = 0
-  homeScore.textContent = countHome
-  guestScore.textContent= countGuest
-  updateGame()
-  flag = true
-}
 function updateGame(){
   if (countHome > countGuest) {
     homeName.innerHTML= "<mark>HOME</mark>"
@@ -88,20 +41,37 @@ function updateGame(){
   }
 }
 
+function incrementScore(points, team){
+  if(team === 'home'){
+    countHome += points
+    homeScore.textContent = countHome
+  }
+
+  else if(team === 'guest'){
+    countGuest += points
+    guestScore.textContent = countGuest
+  }
+  updateGame()
+}
+
+add1Home.onclick = () =>{incrementScore(1,"home")}
+add2Home.onclick = () =>{incrementScore(2,"home")}
+add3Home.onclick = () =>{incrementScore(3,"home")}
+add1Guest.onclick = () =>{incrementScore(1,"guest")}
+add2Guest.onclick = () =>{incrementScore(2,"guest")}
+add3Guest.onclick = () =>{incrementScore(3,"guest")}
+  
 
 
-// btn.onclick = () =>{
-//   if(countGuest>0 || countHome>0){
-//     while(flag == false){
-//       if(countHome>countGuest){
-//         homeName.textContent = "<mark>HOME</mark>"
-//         guestName.textContent = "AWAY"
-//       }
+newGame.onclick = () =>{
+  countHome = 0
+  countGuest = 0
+  homeScore.textContent = countHome
+  guestScore.textContent= countGuest
+  updateGame()
+  flag = true
+}
 
-//       else if(countGuest>countHome){
-//         guestName.textContent = "<mark>AWAY</mark>"
-//         homeName.textContent = "HOME"
-//       }
-//     }
-//   }
-// }
+
+
+
